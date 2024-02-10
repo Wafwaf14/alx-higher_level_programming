@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-
 if __name__ == "__main__":
-    """Print the number of and list of arguments."""
+    """thiss is a program that prints nbr and  list of its arguments. """
     import sys
-
-    count = len(sys.argv) - 1
-    if count == 0:
+    nbre_arguments = len(sys.argv) - 1
+    if nbre_arguments == 0:
         print("0 arguments.")
-    elif count == 1:
+    elif nbre_arguments == 1:
         print("1 argument:")
+        print("1: {}".format(sys.argv[0]))
     else:
-        print("{} arguments:".format(count))
-    for i in range(count):
-        print("{}: {}".format(i + 1, sys.argv[i + 1]))
+        print("{} arguments:".format(nbre_arguments))
+        for k in range(nbre_arguments):
+            print("{}: {}".format(k + 1, sys.argv[k + 1]))
